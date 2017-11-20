@@ -30,6 +30,12 @@ public class CustomerValidatorConfig implements ApplicationContextAware {
         customerValidationRules = applicationContext.getBeansWithAnnotation(CustomerRule.class);
     }
 
+    /**
+     * 从自定义验证规则集合中获取自定义验证起
+     *
+     * @param annotation
+     * @return
+     */
     private CustomerValidatorRule findFormMap(Annotation annotation) {
         Iterator<String> iterator = customerValidationRules.keySet().iterator();
         while (iterator.hasNext()) {
