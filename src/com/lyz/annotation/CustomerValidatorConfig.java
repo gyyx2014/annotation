@@ -45,7 +45,6 @@ public class CustomerValidatorConfig implements ApplicationContextAware {
                 return customerValidatorRule;
             }
         }
-
         return null;
     }
 
