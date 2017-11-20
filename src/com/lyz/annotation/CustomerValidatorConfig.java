@@ -22,7 +22,10 @@ import java.util.concurrent.ConcurrentHashMap;
 public class CustomerValidatorConfig implements ApplicationContextAware {
 
     private Map<Annotation, CustomerValidatorRule> customerValidatorRuleMap = new ConcurrentHashMap<Annotation, CustomerValidatorRule>();
+<<<<<<< HEAD
 
+=======
+>>>>>>> f67f84d31b8863820ef0931bbaa25d0204fc6727
     private Map<String, Object> customerValidationRules = null;
 
 
