@@ -21,6 +21,9 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class CustomerValidatorConfig implements ApplicationContextAware {
 
+    /**
+     * 自定义规则器集合
+     */
     private Map<Annotation, CustomerValidatorRule> customerValidatorRuleMap = new ConcurrentHashMap<Annotation, CustomerValidatorRule>();
 
     private Map<String, Object> customerValidationRules = null;
