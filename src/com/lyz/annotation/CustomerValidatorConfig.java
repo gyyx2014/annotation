@@ -26,6 +26,9 @@ public class CustomerValidatorConfig implements ApplicationContextAware {
      */
     private Map<Annotation, CustomerValidatorRule> customerValidatorRuleMap = new ConcurrentHashMap<Annotation, CustomerValidatorRule>();
 
+    /**
+     * 验证器规则集合
+     */
     private Map<String, Object> customerValidationRules = null;
 
     /**
@@ -56,6 +59,12 @@ public class CustomerValidatorConfig implements ApplicationContextAware {
         return null;
     }
 
+    /**
+     * 根据注解获取自定义验证起规则
+     *
+     * @param annotation
+     * @return
+     */
     public CustomerValidatorRule findRule(Annotation annotation) {
         if (!customerValidatorRuleMap.containsKey(annotation)) {
             CustomerValidatorRule newCustomerValidatorRule = findFormMap(annotation);
