@@ -48,6 +48,12 @@ public class CustomerValidatorConfig implements ApplicationContextAware {
         return null;
     }
 
+    /**
+     * 根据注解获取自定义验证起规则
+     *
+     * @param annotation
+     * @return
+     */
     public CustomerValidatorRule findRule(Annotation annotation) {
         if (!customerValidatorRuleMap.containsKey(annotation)) {
             CustomerValidatorRule newCustomerValidatorRule = findFormMap(annotation);
