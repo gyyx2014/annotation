@@ -26,6 +26,9 @@ public class CustomerValidatorConfig implements ApplicationContextAware {
      */
     private Map<Annotation, CustomerValidatorRule> customerValidatorRuleMap = new ConcurrentHashMap<Annotation, CustomerValidatorRule>();
 
+    /**
+     * 验证器规则集合
+     */
     private Map<String, Object> customerValidationRules = null;
 
 
