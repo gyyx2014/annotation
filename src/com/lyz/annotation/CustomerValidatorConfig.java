@@ -28,7 +28,12 @@ public class CustomerValidatorConfig implements ApplicationContextAware {
 
     private Map<String, Object> customerValidationRules = null;
 
-
+    /**
+     * spring中setApplicationContext
+     *
+     * @param applicationContext
+     * @throws BeansException
+     */
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         customerValidationRules = applicationContext.getBeansWithAnnotation(CustomerRule.class);
     }
